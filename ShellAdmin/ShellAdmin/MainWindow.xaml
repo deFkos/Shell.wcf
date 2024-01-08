@@ -1,0 +1,20 @@
+﻿<Window x:Class="ShellAdmin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShellAdmin"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="266">
+    <Grid>
+        <Button x:Name="Connection_btn" Content="Connection" Margin="0,389,0,0" Click="Connection_btn_Click"/>
+        <TextBox x:Name="Name"  Margin="0,356,0,0" TextWrapping="Wrap" Text="" Height="19" VerticalAlignment="Top"/>
+        <TextBox x:Name="idUser" Margin="198,161,0,0" TextWrapping="Wrap" Text="" Height="19" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbChat" Margin="0,0,0,282"/>
+        <Slider x:Name="hHoursSl" HorizontalAlignment="Left" Margin="118,160,0,0" VerticalAlignment="Top" Width="70" Maximum="24" SmallChange="1" />
+        <Slider x:Name="hMinuteSl" HorizontalAlignment="Left" Margin="118,212,0,0" VerticalAlignment="Top" Width="70" Maximum="60" SmallChange="1"/>
+        <TextBlock x:Name="hHoursLabl" Text="{Binding ElementName=hHoursSl, Path=Value}"  HorizontalAlignment="Left" Margin="151,185,0,0" VerticalAlignment="Top" Height="25" Width="29"/>
+        <TextBlock x:Name="hMinuteLabl" Text="{Binding ElementName=hMinuteSl, Path=Value}" HorizontalAlignment="Left" Margin="152,238,0,0" VerticalAlignment="Top" Height="25" Width="34"/>
+        <Button x:Name="AddTime_btn" Content="Добавить время" HorizontalAlignment="Left" Margin="92,260,0,0" VerticalAlignment="Top" Height="35" Width="111" Click="AddTime_btn_Click"/>
+    </Grid>
+</Window>
